@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="作者">
+  <meta name="Keywords" content="关键字">
+  <meta name="Description" content="简要介绍">
+  <title>Document</title>
+  <link rel="stylesheet" href="" />
+  <style>
+	*{
+		margin:0;
+		padding:0;
+	  }
+	 #background{
+		position:relative;
+		width:520px;
+		height:500px;
+		margin:30px auto;
+	  }
+	 .love{
+		width:300px;
+		height:300px;
+		background:#d5083b;
+		box-shadow:0px 0px 40px -4px #d5083b;
+	  }
+	  .love-left{
+		position:absolute;
+		top:0px;
+		left:0px;
+		border-radius:150px;
+		/*渐变色 渐变开始位置、渐变开始颜色、渐变结束颜色*/
+		background:linear-gradient(to left right,#ee0a44 0%,#d5083b 40%);
+		/*box-shadow:-15px -13px 40px -4px #d5083b;*/
+		/*box-shadow:0px 0px 40px -4px #d5083b;*/
+		/*background:red;*/
+		transform:scale(1);
+		animation:heart-beat 0.6s ease infinite;
+		z-index:3;
+	  }
+	  .love-right{
+		position:absolute;
+		top:0px;
+		right:0px;
+		border-radius:150px;
+		background:linear-gradient(to right left,#ee0a44 0%,#d5083b 50%);
+		/*background:red;*/
+		transform:scale(1);
+		animation:heart-beat 0.6s ease infinite;
+		z-index:2;
+	  }
+	  .love-bottom{
+		position:absolute;
+		top:109px;
+		left:110px;
+		transform:rotate(45deg) scale(1);
+		background:linear-gradient(to left top,#ee0a44 0%,#d5083b 40%);
+		/*background:red;*/
+		animation:heart-beat 0.6s ease infinite;
+		z-index:1;
+	  }
+	  @keyframes heart-beat{
+		0%{
+		   transform:rotate(45deg) scale(1);
+		   box-shadow:0px 0px 40px -4px #d5083b;
+		   }
+		50%{
+		   transform:rotate(45deg) scale(1.1);
+		   box-shadow:5px 5px 40px 10px #d5083b;
+		   }
+		100%{
+		   transform:rotate(45deg) scale(1);
+		   box-shadow:0px 0px 40px -4px #d5083b;
+		   }
+	   }
+  </style>
+ </head>
+ <body>
+	<div id="background"> 
+
+              <div class="love love-left"></div>
+
+              <div class="love love-right"></div>
+
+              <div class="love love-bottom"></div>
+
+         </div>
+ </body>
+</html>
